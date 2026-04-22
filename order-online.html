@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Frozen Delights web page" />
+        <meta name="author" content="Esther Rivka Weinberg" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
+        />
+
+        <title>Oder Online-Frozen Delights</title>
+        <!--favicon of logo-->
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+        <link rel="stylesheet" href="order-online.css" />
+    </head>
+    <body>
+        <!-- Hamburger Icon -->
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="nav" id="navMenu">
+            <img
+                src="Frozen Delights logo.png"
+                alt="Logo image"
+                class="logo"
+                onclick="goHome()"
+                style="cursor: pointer"
+            />
+
+            <a href="index.html">🏠Home</a>
+            <a href="order-online.html">📄Order Online</a>
+            <a href="#">🎉Weekly Special</a>
+            <a href="contact.html">✉️Contact</a>
+            <a href="about.html">ℹ️About Us</a>
+        </nav>
+
+        <!-- Header-->
+
+        <div class="grid">
+            <img src="header3.png" />
+            <h1 class="header-text">Order Online</h1>
+        </div>
+
+        <script src="script.js"></script>
+
+        <!-- Order-->
+        <form action="/order_form" method="post">
+            <h4>Contact Info</h4>
+            <div class="order_form">
+                <label for="name"> Full Name</label>
+                <input type="text" id="name" name="name" maxlength="30" autofocus required />
+            </div>
+
+            <div class="order_form">
+                <label for="telephone">Telephone Number</label>
+                <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    pattern="\d{3}-\d{3}-\d{4}"
+                    placeholder="123-456-7890"
+                    size="12"
+                    required
+                />
+            </div>
+
+            <div class="order_form">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <br />
+            <h4>Choice Selection</h4>
+            <div class="order_form">
+                <label>Select Item</label>
+                <select name="item">
+                    <option>Ice Cream</option>
+                    <option>Milk Shake</option>
+                    <option>Smoothie</option>
+                    <option>Ice Coffee</option>
+                </select>
+            </div>
+
+            <div class="order_form">
+                <label>Choose Flavor</label>
+                <select name="flavor">
+                    <option>chocolate</option>
+                    <option>Mocha</option>
+                    <option>Strawberry</option>
+                    <option>Vanilla</option>
+                </select>
+            </div>
+
+            <div class="order_form">
+                <label>Select Size</label>
+                <select name="flavor">
+                    <option>small</option>
+                    <option>medium</option>
+                    <option>large</option>
+                </select>
+            </div>
+            <div class="order_form">
+                <label for="add"> Add-Ons</label>
+                <input type="text" id="add" name="add" />
+            </div>
+            <div class="order_form">
+                <label for="sp-requests">Special Requests</label><br />
+                <textarea id="sp-requests" name="sp-requests" rows="5" cols="50"></textarea>
+            </div>
+            <br />
+            <div class="order_form">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+
+        <!--Footer-->
+        <footer class="footer">
+            <h3>Frozen Delights</h3>
+            <p>123 Sweet Street | Chicago, IL</p>
+            <p>Open Sun-Thurs: 11am - 10pm</p>
+            <p>📞 (773) 123-4567</p>
+        </footer>
+    </body>
+</html>
